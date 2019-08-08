@@ -3,7 +3,7 @@ var Word = require("./word.js");
 var inquirer = require('inquirer');
 var colors = require('colors');
 
-wordList = ["YOSHI", "MARIO", "PRINCESS PEACH", "LUIGI", "PRINCESS DAISY", "BOWSER", "PAULINE", "TOAD", "CHAIN CHOMP", "BIRDO", "ROSALINA", "PETEY PIRANHA", "DRY BONES", "DONKEY KONG"];
+wordList = ["JOYCE BYERS","JIM HOPPER","MIKE WHEELER","ELEVEN","DUSTIN","LUCAS","NANCY","JONATHAN","KAREN","MARTIN","WILL","MAX","STEVE HARRINGTON","BILLY","ERICA SINCLAIR"];
 var select = 0;
 var chosenWord = "";
 var gameWord = "";
@@ -13,7 +13,8 @@ var counter = 0;
 //'chosenWord' is used for comparison later to check if the word is solved
 function startGame() {
     if (wordList.length<2) {
-        wordList = ["YOSHI", "MARIO", "PRINCESS PEACH", "LUIGI", "PRINCESS DAISY", "BOWSER", "PAULINE", "TOAD", "CHAIN CHOMP", "BIRDO", "ROSALINA", "PETEY PIRANHA", "DRY BONES", "DONKEY KONG"];
+        wordList = ["JOYCE BYERS","JIM HOPPER","MIKE WHEELER","ELEVEN","DUSTIN","LUCAS","NANCY","JONATHAN","KAREN","MARTIN","WILL","MAX","STEVE HARRINGTON","BILLY","ERICA SINCLAIR"];
+        
     }
     select = Math.floor(Math.random()*wordList.length);
     chosenWord = wordList[select];
@@ -22,7 +23,7 @@ function startGame() {
     if (select > -1) {
         wordList.splice(select, 1);
     }
-    console.log("\nYou get 8 letter guesses to find the Mario character.\n".cyan)
+    console.log("\nYou get 8 letter guesses to find the Stranger Things character.\n".cyan)
     promptUser();
 }
 
